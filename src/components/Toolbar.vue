@@ -9,7 +9,7 @@
           </a>
         </p>
       </div>
-      <div>
+      <div v-if="scormMode !== 'ON'">
         <p class="center-align">
           <a href="javascript:void(0);" @click="openHelpBar">
             <HelpCircle />
@@ -17,7 +17,7 @@
           </a>
         </p>
       </div>
-      <div>
+      <div v-if="scormMode !== 'ON'">
         <p class="center-align">
           <a href="javascript:void(0);" @click="toggleCommentBar">
             <ChatIcon />
@@ -826,6 +826,7 @@ export default {
   },
   data() {
     return {
+      scormMode: process.env.VUE_APP_SCORM_MODE,
       route1Check: false,
       route2Check: false,
       route3Check: false,
