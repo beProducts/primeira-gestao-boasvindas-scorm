@@ -134,7 +134,7 @@ router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem(productTokenKey);
 
   // Check authentication
-  if (authRequired && !loggedIn) {
+  if (authRequired && !loggedIn && process.env.VUE_APP_SCORM_MODE !== 'ON') {
     return next('/');
   }
 
