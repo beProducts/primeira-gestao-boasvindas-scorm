@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapa de investigação do negócio</title>
+
+    <!-- Libraries -->
+    <link href="materialize.min.css" rel="stylesheet">
+    <link href="material-icons.css" rel="stylesheet">
+    <link href="toastr.min.css" rel="stylesheet">
+    <link href="jquery-confirm.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="jquery-confirm.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.min.js"></script>
+
+    <!-- Assets -->
+    <link href="plugin.css" rel="stylesheet">
+    <link href="plugin-form.css" rel="stylesheet">
+    <script src="plugin-component-dialog.js" defer></script>
+    <script src="plugin-component-toast.js" defer></script>
+    <script src="be-forms.js" defer></script>
+</head>
+<body>
+    <main class="container mt-3 boxed">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="be-text-purple">Mapa de investigação do negócio</h1>
+                <img src="banner.jpg" alt="main image" class="responsive-img">
+
+                <h2 class="be-text-aqua">Um bom gestor conhece o negócio onde está inserido, os objetivos estratégicos, os resultados e a atuação da empresa no mercado, pois só assim ele é capaz de fazer uma boa gestão da sua equipe e alcançar os resultados esperados. </h2>
+                <div class="center-align">
+                    <img src="banner2.jpg" alt="main image 2" class="responsive-img">
+                </div>
+                <p class="be-text-orange">Se pensarmos nos atletas, notamos que eles também precisam de uma amplitude de conhecimentos para vencer as provas. A compreensão da anatomia corporal, alimentação, fisiologia, análise dos competidores, últimos recordes etc, faz parte da sua atuação; e isso exige pesquisa, estudo, levantamento e análise de informações.</p>
+                <p class="be-text-purple">Para adquirir o conhecimento e as informações necessárias para um bom desempenho é necessário se preparar.</p>
+                <p class="be-text-purple">Preparar-se é um ato de inteligência, mas, acima de tudo, é um ato de respeito consigo e com os outros. Significa que antes de fazermos algo, dedicamos tempo de qualidade para alcançarmos nosso objetivo. O resultado que alcançamos, sem dúvida, é melhor do que quando não nos preparamos.​</p>
+
+                <h2 class="be-text-red">COMECE DO MACRO PARA O MICRO<br>Para iniciar o seu processo de preparação você deverá assumir o papel de um investigador. Veja abaixo o Mapa que guiará você nesta busca por informações.</h2>
+                <img src="chart.jpg" alt="chart" class="responsive-img">
+
+                <form id="frmQuestions" name="frmQuestions">
+                    <div class="row">
+                        <div class="col s12">
+                            <template data-question-id-93 class="be-text-purple"></template>
+                            <template data-question-id-94 class="be-text-purple"></template>
+                            <template data-question-id-95 class="be-text-purple"></template>
+                            <template data-question-id-96 class="be-text-purple"></template>
+                            <template data-question-id-97 class="be-text-purple"></template>
+                        </div>
+
+                        <div class="action-send-form input-field col s12">
+                            <button id="btnSend" class="btn" type="submit" onclick="pluginComponentFormJS.sendForm(event);">Gravar dados</button>
+                            <button id="btnEdit" class="btn hide" type="button" onclick="pluginComponentFormJS.editForm(event);">Editar</button>
+                            <button id="btnDownload" class="btn hide right" type="button" onclick="pluginComponentDownloadJS.download(event);">Download</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

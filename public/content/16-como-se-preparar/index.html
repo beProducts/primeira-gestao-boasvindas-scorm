@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Como se preparar?</title>
+
+    <!-- Libraries -->
+    <link href="materialize.min.css" rel="stylesheet">
+    <link href="material-icons.css" rel="stylesheet">
+    <link href="toastr.min.css" rel="stylesheet">
+    <link href="jquery-confirm.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="jquery-confirm.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.min.js"></script>
+
+    <!-- Assets -->
+    <link href="plugin.css" rel="stylesheet">
+    <link href="plugin-form.css" rel="stylesheet">
+    <script src="plugin-component-dialog.js" defer></script>
+    <script src="plugin-component-toast.js" defer></script>
+    <script src="be-forms.js" defer></script>
+</head>
+<body>
+    <main class="container mt-3 boxed">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="be-text-aqua">Como se preparar para uma boa primeira conversa com a sua equipe?</h1>
+                <div class="center-align">
+                    <img src="banner.jpg" alt="main image" class="responsive-img">
+                    <img src="banner2.jpg" alt="main image" class="responsive-img">
+                </div>
+
+                <h2 class="be-text-aqua">Isso vai dar só um pouquinho de trabalho, mas, vá em frente, vai valer muito a pena.</h2>
+                <p class="be-text-aqua">Então, que tal se reservar um pouco e responder às quatro perguntas a seguir?</p>
+
+                <a href="https://cmsphoto.ww-cdn.com/superstatic/1472054/art/default/20907216-25556372.jpg?v=1529540748">
+                    <img src="banner3.jpg" alt="main image" class="responsive-img">
+                </a>
+                <br>
+
+                <form id="frmQuestions" name="frmQuestions">
+                    <div class="row">
+                        <template data-question-id-109 class="be-text-purple"></template>
+                        <div class="col s12">
+                            <p class="be-text-aqua m-0">Exemplos:
+                                    A. Percebo como uma conquista.
+                                    B. Percebo como um perigo.
+                                    C. Percebo como um obstáculo.
+                            </p>
+                        </div>
+                        <template data-question-id-110 class="be-text-purple"></template>
+                        <div class="col s12">
+                            <p class="be-text-aqua m-0">Exemplos:
+                                    A. Sinto alegria por ter conquistado esta posição.
+                                    B. Sinto medo de ser rejeitado pela equipe.
+                                    C. Sinto raiva por ter que me expor.
+                            </p>
+                        </div>
+                        <template data-question-id-111 class="be-text-purple large"></template>
+                        <div class="col s12">
+                            <p class="be-text-aqua m-0">Exemplos:
+                                    A. Me aproximo da equipe como uma pessoa igual a cada um que está ali. Faço isso dialogando, fazendo e respondendo perguntas.
+                                    B. Eu não priorizo fazer esta reunião. Talvez eu preferisse conversar individualmente com cada pessoa.
+                                    C. Geralmente fico nervoso e irritado em situações como essa. Acabo falando em tom agressivo, como se estivesse me defendendo de um ataque das pessoas da equipe.
+                            </p>
+                            <br>
+                            <p class="be-text-purple m-0">Diante de tudo isso, o que posso fazer para me sentir confortável e criar um bom ambiente para esta reunião? Caso você ainda não tenha uma resposta para esta pergunta, nós te convidamos a acessar os temas "Inspire-se aqui" e o "Ponto de partida para a prática" e conhecer um checklist e algumas sugestões interessantes. </p>
+                        </div>
+                        <template data-question-id-112 class="be-text-purple large"></template>
+                        <div class="col s12">
+                            <p class="be-text-aqua m-0"><span class="be-text-purple">Sobre emoções e sentimentos</span><br>Só para fechar esta conversa sobre emoções e sentimentos vale lembrar que os sentimentos, em geral, refletem como a gente se sente frente a uma emoção.
+                                António Damásio, explica que existe uma cadeia complexa de acontecimentos no organismo que começa na emoção e termina no sentimento. Uma parte do processo se torna pública (emoção) e outra sempre se mantém privada (sentimento). “As emoções ocorrem no teatro do corpo. Os sentimentos ocorrem no teatro da mente”, afirma. Em outro momento a gente aprofunda nossa conversa sobre sentimentos, ok?
+                            </p>
+                        </div>
+                        <div class="action-send-form input-field col s12">
+                            <button id="btnSend" class="btn" type="submit" onclick="pluginComponentFormJS.sendForm(event);">Gravar dados</button>
+                            <button id="btnEdit" class="btn hide" type="button" onclick="pluginComponentFormJS.editForm(event);">Editar</button>
+                            <button id="btnDownload" class="btn hide right" type="button" onclick="pluginComponentDownloadJS.download(event);">Download</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inspire-se aqui</title>
+
+    <!-- Libraries -->
+    <link href="materialize.min.css" rel="stylesheet">
+    <link href="material-icons.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+
+
+    <!-- Assets -->
+    <link href="plugin.css" rel="stylesheet">
+    <link href="plugin-video.css" rel="stylesheet">
+    <link href="plugin-template.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="plyr/plyr.css">
+    <script type="text/javascript" src="plyr/plyr.js"></script>
+</head>
+<body>
+    <main class="container mt-3">
+        <div class="row">
+            <div class="col s12">
+                <video id="player" playsinline controls>
+                    <source src="sobre-gerir-a-si-mesmo.mp4" type="video/mp4" size="576" />
+                </video>
+                <h1 class="center-align m-3">Gerir a si mesmo</h1>
+            </div>
+        </div>
+    </main>
+    <script>
+        new Plyr('#player');        
+    </script>
+</body>
+</html>

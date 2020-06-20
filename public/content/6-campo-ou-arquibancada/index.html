@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Campo ou Arquibancada?</title>
+
+    <!-- Libraries -->
+    <link href="materialize.min.css" rel="stylesheet">
+    <link href="material-icons.css" rel="stylesheet">
+    <link href="toastr.min.css" rel="stylesheet">
+    <link href="jquery-confirm.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="jquery-confirm.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.min.js"></script>
+
+    <!-- Assets -->
+    <link href="plugin-form.css" rel="stylesheet">
+    <script src="plugin-component-dialog.js" defer></script>
+    <script src="plugin-component-toast.js" defer></script>
+    <script src="be-forms.js" defer></script>
+</head>
+<body>
+    <main class="container mt-3 boxed">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="be-text-blue">Campo ou Arquibancada?</h1>
+                <img src="banner.jpg" alt="main image" class="responsive-img">
+
+                <h2 class="be-text-aqua">Muitas coisas acontecem em nossas vidas e nós não temos como prever ou agir sobre elas no instante em que acontecem. Você consegue pensar em alguns destes acontecimentos?</h2>
+                <p class="be-text-purple">Veja algumas situações que foram lembradas:</p>
+                <ol class="be-text-purple">
+                    <li>A perda de um emprego.</li>
+                    <li>Não passar em um processo seletivo muito desejado.</li>
+                    <li>Um grande engarrafamento e o atraso para um compromisso importante. </li>
+                    <li>Uma doença inesperada.</li>
+                    <li>O celular que pifou.</li>
+                </ol>
+
+                <h2 class="be-text-purple">Certamente, você se lembrou de várias outras situações.</h2>
+                <p class="be-text-purple">Diante dos desafios que se apresentam na vida, qual costuma ser o seu modo de pensar e de agir?</p>
+                <p class="be-text-aqua">Escolha quantas opções quiser:</p>
+
+                <form id="frmQuestions" name="frmQuestions">
+                    <div class="row">
+                        <div class="col s12">
+                            <template data-question-id-26 class="be-text-aqua"></template>
+                            <template data-question-id-27 class="be-text-aqua"></template>
+                            <template data-question-id-28 class="be-text-aqua"></template>
+                            <template data-question-id-29 class="be-text-aqua"></template>
+                            <template data-question-id-30 class="be-text-aqua"></template>
+                            <template data-question-id-31 class="be-text-aqua"></template>
+                            <template data-question-id-32 class="be-text-aqua"></template>
+                            <template data-question-id-33 class="be-text-aqua"></template>
+                            <template data-question-id-34 class="be-text-aqua"></template>
+                            <template data-question-id-35 class="be-text-aqua"></template>
+                            <template data-question-id-36 class="be-text-aqua"></template>
+                            <template data-question-id-37 class="be-text-aqua"></template>
+                            <template data-question-id-38 class="be-text-aqua"></template>
+                            <template data-question-id-39 class="be-text-aqua"></template>
+                            <template data-question-id-40 class="be-text-aqua"></template>
+                        </div>
+                        <div class="col s12">
+                            <p class="be-text-aqua"><span class="be-text-purple">Focado no problema</span><br>Note que algumas atitudes citadas no questionário são adotadas por pessoas que tendem a focar mais no problema/situação que estão vivenciando. Atitudes como: procurar alguém para reclamar, ter dó de si mesmo, fazer piada (subestimando a situação), sair de si e procurar um culpado, faz com que estas pessoas assumam uma posição de vítima em suas vidas. E, no momento em que nos sentimos vítimas, entregamos o nosso poder. Na vítima estamos assistindo da arquibancada a nossa vida acontecer. </p>
+                            <p class="be-text-aqua"><span class="be-text-purple">Focado no aprendizado</span><br>Existem algumas atitudes citadas que são escolhas de pessoas que tendem a focar mais no aprendizado que o problema/situação traz. Atitudes como: se questionar sobre o que pode aprender com a situação, o que poderia ter feito diferente, compartilhar o que está se passando com alguém que já viveu aquilo e refletir sobre o que poderá fazer em uma outra situação semelhante, posiciona estas pessoas como verdadeiras aprendizes da vida. Este é um excelente começo de caminho para o protagonismo.</p>
+                            <p class="be-text-aqua"><span class="be-text-purple">Focado na solução</span><br>Por fim, algumas atitudes citadas fazem parte das escolhas das pessoas que já possuem um jeito de ser protagonista; são aquelas pessoas cujo foco está na solução do problema/situação. Atitudes como: buscar ajuda, definir o que fará daqui pra frente (após enfrentar o problema/situação), refletir sobre qual é a melhor forma de lidar com o que está acontecendo; são bons exemplos do protagonismo sendo colocado em prática. Ao sermos protagonistas estamos em campo, nos responsabilizando pelas nossas escolhas e pela nossa vida. Fazendo acontecer.</p>
+                            <p class="be-text-purple">E você? As respostas que você assinalou representam as escolhas que você faz para viver a sua vida e lidar com acontecimentos sobre os quais você não tem controle. Reflita sobre os itens que marcou e identifique qual é o seu padrão de comportamento, isto é, quais são as suas reações mais comuns quando está diante dessas situações fora de controle e inesperadas. Nestes momentos você tende a focar mais na solução, no aprendizado ou no problema?</p>
+                        </div>
+
+                        <template data-question-id-41 class="be-text-purple"></template>
+
+                        <div class="action-send-form input-field col s12">
+                            <button id="btnSend" class="btn" type="submit" onclick="pluginComponentFormJS.sendForm(event);">Gravar dados</button>
+                            <button id="btnEdit" class="btn hide" type="button" onclick="pluginComponentFormJS.editForm(event);">Editar</button>
+                            <button id="btnDownload" class="btn hide right" type="button" onclick="pluginComponentDownloadJS.download(event);">Download</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

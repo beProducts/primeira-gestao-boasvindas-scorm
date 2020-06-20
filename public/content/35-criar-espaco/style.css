@@ -1,0 +1,497 @@
+h1 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+h2 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+h3 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+h4 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+h5 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: .7rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: .07rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+h6 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+ul li {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+ol li {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #2d2d2d
+}
+
+blockquote {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 2.5rem;
+  color: #2d2d2d
+}
+
+a {
+  text-decoration: underline;
+  color: inherit
+}
+
+.fr_text_large_dark_center.fr-text p {
+  font-family: Trebuchet MS;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  text-align: left;
+  letter-spacing: 0;
+  color: #585858
+}
+
+.fr_text_large_dark_center.fr-text h1 {
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-align: center;
+  color: #ffa504
+}
+
+.fr_text_large_dark_center.fr-text h2 {
+  font-size: 3rem;
+  text-align: center
+}
+
+.fr_text_large_dark_center.fr-text h3 {
+  font-size: 2rem;
+  text-align: center
+}
+
+.fr_text_large_dark_center.fr-text h4 {
+  font-size: 1.8rem;
+  text-align: center
+}
+
+.fr_text_large_dark_center.fr-text h6 {
+  font-size: 2rem;
+  text-align: center
+}
+
+.fr_text_large_dark_center.fr-text h5 {
+  font-size: 1rem;
+  text-align: center
+}
+
+.fr_text_large_dark_center.fr-text blockquote {
+  text-align: left
+}
+
+.fr_text_bright_left.fr-text h1 {
+  font-family: Trebuchet MS;
+  color: white
+}
+
+.fr_text_bright_left.fr-text p {
+  font-family: Trebuchet MS;
+  font-size: 1.4rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8)
+}
+
+.fr_text_bright_left.fr-text h5 {
+  text-align: left;
+  color: white
+}
+
+.fr_text_bright_left.fr-text h4 {
+  text-align: left;
+  color: white
+}
+
+.fr_text_bright_left.fr-text h2 {
+  text-align: left;
+  color: white
+}
+
+.fr_text_bright_left.fr-text h3 {
+  text-align: left;
+  color: white
+}
+
+.fr_text_bright_left.fr-text h6 {
+  color: white
+}
+
+.fr_text_bright_left.fr-text blockquote {
+  color: white
+}
+
+.fr_content_11 {
+  float: none;
+  display: block;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  min-height: 86.01rem
+}
+
+.fr_text_28 {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px
+}
+
+.fr_hero_with_bg {
+  float: none;
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: black;
+  background-image: linear-gradient(rgba(59, 51, 51, 0.7), rgba(59, 51, 51, 0.7)), url(photo-1490410006060-e1dc82ab0a70.jpg)
+}
+
+.fr_hd3_content {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: repeat;
+  max-width: 1200px
+}
+
+.fr_text_25 {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-top: 1rem;
+  max-width: 600px
+}
+
+.fr_gallery_2 {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  min-height: 69.13rem
+}
+
+.fr_gry2_column_images {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px
+}
+
+.fr_gry2_column_images.fr-grid>.fr-widget {
+  float: left
+}
+
+.fr_gry2_column_images.fr-grid>.fr-widget:nth-child(4n+1) {
+  margin-top: .6em;
+  margin-right: 2%;
+  margin-bottom: .6em;
+  margin-left: 2%;
+  width: 22.5%;
+  clear: left;
+  max-width: inherit
+}
+
+.fr_gry2_column_images.fr-grid>.fr-widget:nth-child(4n+2) {
+  margin-top: .6em;
+  margin-right: 2%;
+  margin-bottom: .6em;
+  margin-left: 0;
+  width: 22.5%;
+  clear: none;
+  max-width: inherit
+}
+
+.fr_gry2_column_images.fr-grid>.fr-widget:nth-child(4n+3) {
+  margin-top: .6em;
+  margin-right: 2%;
+  margin-bottom: .6em;
+  margin-left: 0;
+  width: 22.5%;
+  clear: none;
+  max-width: inherit
+}
+
+.fr_gry2_column_images.fr-grid>.fr-widget:nth-child(4n+4) {
+  margin-top: .6em;
+  margin-right: 2%;
+  margin-bottom: .6em;
+  margin-left: 0;
+  width: 22.5%;
+  clear: none;
+  max-width: inherit
+}
+
+.fr_gry2_image_one {
+  background-image: url(oasis2_1.jpg_340x340.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 12rem
+}
+
+.fr_gry2_image_two {
+  background-image: url(vamos_2.jpg_340x340.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 12rem
+}
+
+.fr_gry2_image_three {
+  background-image: url(wiki_4.jpg_340x340.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 12rem
+}
+
+.fr_gry2_image_four {
+  background-image: url(play2_2.jpg_340x340.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 12rem
+}
+
+.fr_content_12 {
+  float: none;
+  display: block;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  min-height: 48.21rem
+}
+
+.fr_text_29 {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px
+}
+
+.fr_content_13 {
+  float: none;
+  display: block;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  min-height: 26.96rem
+}
+
+.fr_content_14 {
+  float: none;
+  display: block;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white
+}
+
+.fr_text_31 {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px
+}
+
+.fr_text_30 {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px
+}
+
+@media screen and (max-width:768px) {
+  .fr_text_large_dark_center.fr-text h1 {
+    font-size: 2.2rem
+  }
+  .fr_text_large_dark_center.fr-text h6 {
+    font-family: Trebuchet MS;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: left
+  }
+  .fr_text_large_dark_center.fr-text h5 {
+    font-family: Trebuchet MS
+  }
+  .fr_content_11 {
+    min-height: 89.85rem
+  }
+  .fr_gallery_2 {
+    min-height: 72.85rem
+  }
+  .fr_gry2_column_images.fr-grid>.fr-widget {
+    float: left
+  }
+  .fr_gry2_column_images.fr-grid>.fr-widget:nth-child(2n+1) {
+    margin-top: .6em;
+    margin-right: 1%;
+    margin-bottom: .6em;
+    margin-left: 0;
+    width: 49%;
+    clear: left;
+    max-width: inherit
+  }
+  .fr_gry2_column_images.fr-grid>.fr-widget:nth-child(2n+2) {
+    margin-top: .6em;
+    margin-right: 0;
+    margin-bottom: .6em;
+    margin-left: 1%;
+    width: 49%;
+    clear: none;
+    max-width: inherit
+  }
+  .fr_gry2_image_one {
+    background-image: url(wiki_3.jpg_340x340.jpg)
+  }
+  .fr_gry2_image_two {
+    background-image: url(oasis2.jpg_340x340.jpg);
+    background-size: cover
+  }
+  .fr_gry2_image_three {
+    background-image: url(play2.jpg_340x340.jpg)
+  }
+  .fr_gry2_image_four {
+    background-image: url(vamos.jpg_340x340.jpg)
+  }
+  .fr_content_12 {
+    min-height: 42.06rem
+  }
+  .fr_content_14 {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+  }
+}
+
+@media screen and (max-width:480px) {
+  .fr_text_large_dark_center {
+    font-size: 1.3em
+  }
+  .fr_text_large_dark_center.fr-text p {
+    font-size: 1.1rem
+  }
+  .fr_text_bright_left.fr-text h1 {
+    font-size: 2rem
+  }
+  .fr_text_bright_left.fr-text p {
+    font-size: 1.1rem
+  }
+  .fr_hero_with_bg {
+    padding-top: 80px;
+    padding-bottom: 80px
+  }
+  .fr_gry2_column_images.fr-grid>.fr-widget {
+    float: left
+  }
+  .fr_gry2_column_images.fr-grid>.fr-widget:nth-child(1n+1) {
+    margin-top: .6em;
+    margin-right: 0;
+    margin-bottom: .6em;
+    margin-left: 0;
+    width: 100%;
+    clear: left;
+    max-width: inherit
+  }
+  .fr_gry2_image_one {
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+  .fr_gry2_image_two {
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+  .fr_gry2_image_three {
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+  .fr_gry2_image_four {
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+}
+
+@media screen and (max-width:320px) {
+  .fr_text_bright_left.fr-text h1 {
+    font-size: 1.7rem
+  }
+}

@@ -1,0 +1,66 @@
+#comment-bar header{
+    background-color: #1a1d56;
+}
+#comment-bar header i{
+    color: rgb(255, 255, 255);
+}
+#comment-bar header div{
+    color: rgb(255, 255, 255);
+}
+#list-comment-container .comment-cell .comment-header .comment-date{
+    color: rgb(253, 120, 87);
+}
+/* */
+#side-navigation, #side-navigation.sidenav .collapsible-body, #side-navigation.sidenav.fixed .collapsible-body{
+    background-color: #CDCDCD
+}
+#side-navigation > .collapsible > li > div.collapsible-header{
+    background-color: #1a1d56;
+    color: #FFFFFF;
+    text-transform: uppercase
+}
+
+#side-navigation h2{
+    color: #1a1d56
+}
+#side-navigation > ul > li.active > div.collapsible-body > ul > li div.collapsible-header{
+    background-color: #313467; /* 26/29/86 */
+    color: #FFFFFF
+}
+
+#side-navigation > ul > li > div.collapsible-body > ul > li a{
+    background-color: #484a78; /* 26/29/86 */
+    color: #FFFFFF
+}
+#side-navigation > ul > li > div.collapsible-body > ul > li a:hover{
+    background-color: #85B872 !important;
+    color: #1a1d56;
+}
+#side-navigation > ul > li > div.collapsible-body > ul > li a:hover span{
+    color: #1a1d56 !important;
+}
+#side-navigation > ul > li > div.collapsible-body > ul > li a i{
+    color: #90A2AA;
+}
+
+#side-navigation ul li a.watched{
+    opacity: 0.4;
+}
+#side-navigation ul li a.current{
+    opacity: 1;
+}
+#side-navigation ul li a.current span, #side-navigation ul li a.current i{
+    color: #a2c617 !important;
+}
+#side-navigation ul li a.current span{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* */
+#be-toolbar{
+    background-color: #1a1d56
+}
+#be-toolbar a, #be-toolbar p{
+    color: rgb(255, 255, 255);
+}

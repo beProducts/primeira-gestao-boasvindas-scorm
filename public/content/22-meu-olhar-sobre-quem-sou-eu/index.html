@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu olhar sobre quem sou eu</title>
+
+    <!-- Libraries -->
+    <link href="materialize.min.css" rel="stylesheet">
+    <link href="material-icons.css" rel="stylesheet">
+    <link href="toastr.min.css" rel="stylesheet">
+    <link href="jquery-confirm.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="toastr.min.js"></script>
+    <script src="jquery-confirm.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.min.js"></script>
+
+    <!-- Assets -->
+    <link href="plugin.css" rel="stylesheet">
+    <link href="plugin-form.css" rel="stylesheet">
+    <script src="plugin-component-dialog.js" defer></script>
+    <script src="plugin-component-toast.js" defer></script>
+    <script src="be-forms.js" defer></script>
+</head>
+<body>
+    <main class="container mt-3 boxed">
+        <div class="row">
+            <div class="col s12">
+                <h1>Meu olhar sobre quem sou eu</h1>
+                <div class="center-align">
+                    <img src="banner.jpg" alt="main image" class="responsive-img">
+                </div>
+                <h2>Que tipo de tratamento você tem dado <span class="be-text-aqua">a si próprio?</span> A vida é corrida, as tarefas se acumulam se fazemos uma pausa, temos objetivos a serem alcançados.&nbsp;</h2>
+                <div class="center-align">
+                    <img src="banner2.jpg" alt="main image" class="responsive-img">
+                </div>
+                <p>Para nos mantermos saudáveis e nos desenvolvermos sempre devemos acolher os pedidos do nosso corpo e da nossa alma. Para isso, precisamos parar alguns minutos ou horas, vez por outra, e refletir sobre como estamos cuidando de nós mesmos. </p>
+                <p>Aproveite o questionário a seguir para colocar em dia o seu cuidado com você mesmo.</p>
+
+                <form id="frmQuestions" name="frmQuestions">
+                    <div class="row">
+                        <template data-question-id-57></template>
+                        <template data-question-id-58></template>
+                        <template data-question-id-59></template>
+                        <template data-question-id-60></template>
+                        <template data-question-id-61></template>
+                        <template data-question-id-62></template>
+                        <template data-question-id-63></template>
+                        <template data-question-id-64 class="large"></template>
+                        <template data-question-id-65></template>
+                        <template data-question-id-66></template>
+                        <template data-question-id-67></template>
+                        <template data-question-id-68></template>
+                        <template data-question-id-69></template>
+                        <template data-question-id-70></template>
+                        <template data-question-id-71></template>
+                        <template data-question-id-72></template>
+
+                        <div class="action-send-form input-field col s12">
+                            <button id="btnSend" class="btn" type="submit" onclick="pluginComponentFormJS.sendForm(event);">Gravar dados</button>
+                            <button id="btnEdit" class="btn hide" type="button" onclick="pluginComponentFormJS.editForm(event);">Editar</button>
+                            <button id="btnDownload" class="btn hide right" type="button" onclick="pluginComponentDownloadJS.download(event);">Download</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'SanukOT';
+    src: url('SanukOT-Bold.eot');
+    src: url('SanukOT-Bold.eot?#iefix') format('embedded-opentype'),
+         url('SanukOT-Bold.woff2') format('woff2'),
+         url('SanukOT-Bold.woff') format('woff'),
+         url('SanukOT-Bold.ttf') format('truetype'),
+         url('SanukOT-Bold.svg#SanukOT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SanukOT';
+    src: url('SanukOT-Thin.eot');
+    src: url('SanukOT-Thin.eot?#iefix') format('embedded-opentype'),
+         url('SanukOT-Thin.woff2') format('woff2'),
+         url('SanukOT-Thin.woff') format('woff'),
+         url('SanukOT-Thin.ttf') format('truetype'),
+         url('SanukOT-Thin.svg#SanukOT-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SanukOT';
+    src: url('SanukOT.eot');
+    src: url('SanukOT.eot?#iefix') format('embedded-opentype'),
+         url('SanukOT.woff2') format('woff2'),
+         url('SanukOT.woff') format('woff'),
+         url('SanukOT.ttf') format('truetype'),
+         url('SanukOT.svg#SanukOT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
