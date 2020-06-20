@@ -91,7 +91,8 @@ export default {
         companyId: process.env.VUE_APP_COMPANY_ID,
         productId,
         objectId: this.$route.meta.pageId,
-        customerId: (userData === null) ? 0 : userData.customerId
+        customerId: (userData === null) ? 0 : userData.customerId,
+        scormMode: process.env.VUE_APP_SCORM_MODE
       }
 
       const $iframe = this.$refs.content;
