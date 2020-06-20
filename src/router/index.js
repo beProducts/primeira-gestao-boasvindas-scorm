@@ -37,6 +37,13 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      redirect: () => {
+        if (process.env.VUE_APP_SCORM_MODE !== 'ON')  return '/login';
+        else  return '/comece-por-aqui';
+      }
+    },
+    {
+      path: '/login',
       name: 'login',
       component: Login,
       meta: { transitionName: 'fade' },
