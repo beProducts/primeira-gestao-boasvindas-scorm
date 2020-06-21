@@ -31,11 +31,11 @@
     <div class="be-navigation" ref="beNavigation">
       <div class="header-toolbar">
         <div class="account-functions">
-          <a href="javascript:void(0);" class="close" @click="goToRoute('/profile');">
+          <a v-if="scormMode !== 'ON'" href="javascript:void(0);" class="close" @click="goToRoute('/profile');">
             <span>Perfil</span> <AccountEdit />
           </a>
-          <span class="separator">|</span>
-          <a href="javascript:void(0);" class="close" @click="logoff">
+          <span v-if="scormMode !== 'ON'" class="separator">|</span>
+          <a v-if="scormMode !== 'ON'" href="javascript:void(0);" class="close" @click="logoff">
             <span>Sair</span> <Logout />
           </a>
         </div>
