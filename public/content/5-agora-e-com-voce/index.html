@@ -41,6 +41,37 @@
                         <template data-question-id-23 class="be-text-purple"></template>
                         <template data-question-id-24 class="be-text-purple"></template>
                         <template data-question-id-25 class="be-text-purple"></template>
+                        <div id="form-scorm" class="col s12 hide">
+                            <div class='input-field col s12'>  
+                                <label for='field-20'>Como foi?</label>  
+                                <textarea data-scorm-mode-on class='materialize-textarea' name='field-20' data-type="1" id='field-20'></textarea>
+                            </div>
+                            <div class='input-field col s12'>  
+                                <label for='field-21'>O que você sentiu?</label>  
+                                <textarea data-scorm-mode-on class='materialize-textarea' name='field-21' data-type="1" id='field-21'></textarea>  
+                            </div>
+                            <div class='input-field col s12'>  
+                                <label for='field-22'>Como a situação terminou?</label>  
+                                <textarea data-scorm-mode-on class='materialize-textarea' name='field-22' data-type="1" id='field-22'></textarea>  
+                            </div>
+                            <div class='input-field col s12'>  
+                                <label>Você tirou algum aprendizado?</label>  
+                                <select data-scorm-mode-on name='field-23' data-type="4">    
+                                    <option value=''>Selecione</option>    
+                                    <option value='Y' selected>Sim</option>    
+                                    <option value='N' >Não</option>  
+                                </select>
+                            </div>
+                            <div class='input-field col s12'>  
+                                <label for='field-24'>Se sim, o que você aprendeu?</label>  
+                                <textarea data-scorm-mode-on class='materialize-textarea' name='field-24' data-type="1" id='field-24'></textarea>
+                            </div>
+                            <div class='input-field col s12'>  
+                                <label for='field-25'>Se não, na sua opinião por que não houve nenhum aprendizado nesta situação?</label>  
+                                <textarea data-scorm-mode-on class='materialize-textarea' name='field-25' data-type="1" id='field-25'></textarea>  
+                            </div>
+                        </div>
+                        
                         <div class="action-send-form input-field col s12">
                             <button id="btnSend" class="btn" type="submit" onclick="pluginComponentFormJS.sendForm(event);">Gravar dados</button>
                             <button id="btnEdit" class="btn hide" type="button" onclick="pluginComponentFormJS.editForm(event);">Editar</button>

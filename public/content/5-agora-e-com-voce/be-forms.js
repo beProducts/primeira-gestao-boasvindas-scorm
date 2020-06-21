@@ -75,7 +75,12 @@ let pluginComponentDownloadJS = {
 
 let pluginComponentFormJS = {
   init: function () {
-    pluginComponentFormJS.getQuestions();
+    if( pluginJS.userData.scormMode !== "ON" ){
+      pluginComponentFormJS.getQuestions();
+    }else{
+      pluginComponentFormJS.getQuestionsStorage();
+      $("#form-scorm").removeClass('hide');
+    }
   },
   initFormPlugins: function () {
     try{
@@ -90,6 +95,40 @@ let pluginComponentFormJS = {
     } catch(e) {
       //
     }
+  },
+  getQuestionsStorage: function(){
+
+    const questionsStorageKey = 'product-' + pluginJS.userData.productId + '-questions-' + pluginJS.userData.objectId;
+
+    // Get check list
+    let appChecks = localStorage.getItem(questionsStorageKey) || '[]';
+
+    // Cast
+    appChecks = JSON.parse(appChecks);
+
+    appChecks.forEach( question => {
+      switch( question.type ){
+        case "1": $('[name=' + question.name + ']').val(question.answer); break;
+        case "2": 
+          if( question.answer === "Y" )
+            $('[name=' + question.name + ']').prop('checked', true);
+          else
+            $('[name=' + question.name + ']').prop('checked', false);
+          break;
+        case "3": $('[name=' + question.name + '][value=' + question.answer + ']').prop('checked', true); break;
+        case "4": $('[name=' + question.name + ']').val(question.answer); break;
+        default: 
+      }
+    });
+
+    if (appChecks.length !== 0) {
+      $("#frmQuestions input, #frmQuestions select, #frmQuestions textarea").prop('disabled', true);
+      $("#btnSend").addClass('hide');
+      $("#btnEdit, #btnDownload").removeClass('hide');
+    }
+
+    pluginComponentFormJS.initFormPlugins();
+
   },
   getQuestions: function () {
     $.ajax({
@@ -158,6 +197,13 @@ let pluginComponentFormJS = {
     pluginComponentFormJS.initFormPlugins();
   },
   sendForm: function (event) {
+    if( pluginJS.userData.scormMode !== "ON" ){
+      pluginComponentFormJS.sendFormServer(event);
+    }else{
+      pluginComponentFormJS.sendFormStorage();
+    }
+  },
+  sendFormServer: function (event) {
     // Cancel default event
     event.preventDefault();
 
@@ -185,6 +231,38 @@ let pluginComponentFormJS = {
           console.log("Ops...deu algo errado. Tente novamente mais tarde.");
           // pluginComponentToastJS.show("error", "Ops...deu algo errado. Tente novamente mais tarde.");
         });
+    });
+  },
+  sendFormStorage: function() {
+
+    const questionsStorageKey = 'product-' + pluginJS.userData.productId + '-questions-' + pluginJS.userData.objectId;
+
+    // Cancel default event
+    event.preventDefault();
+
+    // title, content, btnConfirmText, btnCancelText, callBackConfirm, callBackCancel
+    pluginComponentDialogJS.confirm('', "Confirma a gravação dos dados?", "Sim", "Não", function () {
+      // Get form data
+      let postData = $("#frmQuestions").serializeArray();
+      let questionsAnswers = [];
+
+      postData.forEach( question => {
+        const type = $('[name=' + question.name + ']' ).attr('data-type');   
+        let answer = question.value;
+        
+        if(type === '2')  answer = ($('input:checked').length > 0) ? 'Y' : 'N';
+
+        questionsAnswers.push({
+          name: question.name,
+          type: type,
+          answer: answer
+        });
+      });
+
+      localStorage.setItem(questionsStorageKey, JSON.stringify(questionsAnswers));
+
+      document.location.reload();
+
     });
   }
 }
