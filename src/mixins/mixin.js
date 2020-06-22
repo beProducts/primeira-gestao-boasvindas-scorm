@@ -106,7 +106,7 @@ const mixin = {
       }else{
 
         const productId = process.env.VUE_APP_PRODUCT_ID;
-        const productStoragerKey = `product-${productId}-storage-checked-list`;
+        const productStoragerKey = `product-${productId}-storage-checked-list-boas-vindas`;
 
         // Get check list
         let appChecks = localStorage.getItem(productStoragerKey) || '[]';
@@ -234,7 +234,7 @@ const mixin = {
       }else{
 
         const productId = process.env.VUE_APP_PRODUCT_ID;
-        const productStoragerKey = `product-${productId}-storage-checked-list`;
+        const productStoragerKey = `product-${productId}-storage-checked-list-boas-vindas`;
 
         // Get check list
         let appChecks = localStorage.getItem(productStoragerKey) || '[]';
