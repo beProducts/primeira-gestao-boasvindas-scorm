@@ -18,6 +18,19 @@
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->
+
+  <script src="js/scorm.js"></script>
+  <script>
+    window.scormAPI = getAPI();
+    if (window.scormAPI !== undefined) {
+      window.scormAPI.LMSInitialize('');
+      window.scormAPI.LMSSetValue("cmi.core.lesson_status", "incomplete");
+      window.scormAPI.LMSCommit('');
+    } else {
+      console.warn('Application running in non-scorm mode.');
+    }
+  </script>
+
 </body>
 
 </html>
