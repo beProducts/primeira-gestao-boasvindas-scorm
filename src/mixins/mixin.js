@@ -362,37 +362,7 @@ const mixin = {
           .then(res => res.json())
           .catch((error) => { throw error; });
       }
-    },
-    setPageChecked(stage) {
-      if (window.scormAPI !== undefined) {
-        // Get keys
-        const productId = process.env.VUE_APP_PRODUCT_ID;
-        const productStoragerKey = `product-${productId}-storage`;
-
-        // Get check list
-        let appChecks = localStorage.getItem(productStoragerKey) || '[]';
-
-        // Cast
-        appChecks = JSON.parse(appChecks);
-
-        // Add new stage
-        appChecks.push(stage);
-
-        // Remove duplicate values
-        appChecks = Array.from(new Set(appChecks));
-
-        // SCORM completed
-        if (appChecks.length === 14) {
-          window.scormAPI.LMSInitialize('');
-          window.scormAPI.LMSSetValue("cmi.core.lesson_status", "completed");
-          window.scormAPI.LMSCommit('');
-          console.log('COMPLETED');
-        }
-
-        // Store data
-        localStorage.setItem(productStoragerKey, JSON.stringify(appChecks));
-      }
-    },
+    }
   },
 };
 
