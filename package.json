@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "deploy": "aws s3 sync ./dist s3://empreenda-se.digital/products/primeira-gestao/",
+    "scorm": "cd scorm && cp -R . ../dist && cd ../dist && \"C:\\Program Files\\7-zip/7z\" a teste.zip && mv teste.zip ..",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
