@@ -114,6 +114,13 @@ const mixin = {
         // Cast
         appChecks = JSON.parse(appChecks);
 
+        // SCORM completed
+        if (appChecks.length === process.env.VUE_APP_QUANTITY_OF_SESSION) {
+          window.scormAPI.LMSInitialize('');
+          window.scormAPI.LMSSetValue("cmi.core.lesson_status", "completed");
+          window.scormAPI.LMSCommit('');
+        }
+
         // Add new stage
         appChecks.push( objectId );
 
