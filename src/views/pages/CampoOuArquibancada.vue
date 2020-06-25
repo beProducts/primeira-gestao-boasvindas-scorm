@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="scroll-wrapper">
-      <iframe ref="content" id="content" src="https://empreenda-se.digital/products/primeira-gestao/content/6-campo-ou-arquibancada/index.html" allowfullscreen></iframe>
+      <iframe ref="content" id="content" :src="url" allowfullscreen></iframe>
     </div>
     <div class="toolbar">
       <ToolBar />
@@ -35,12 +35,17 @@ export default {
   },
   data() {
     return {
+      url: "https://empreenda-se.digital/products/primeira-gestao/content/6-campo-ou-arquibancada/index.html",
       timeSpentOnPage: 0,
       mainTimer: null,
       alarmTimer: null,
     };
   },
   mounted() {
+
+    if( process.env.VUE_APP_SCORM_MODE === 'ON')
+      this.url = "content/6-campo-ou-arquibancada/index.html";
+
     // Receive data from iframe
     EventBus.$on('goToRoute', this.goToRoute);
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-C7652D694534E62E5C7CBBB60325480A" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-121DF2C3C961D0CBCB6E598FA7CAD187">
+    <organization identifier="ORG-121DF2C3C961D0CBCB6E598FA7CAD187" structure="hierarchical">
+      <title>Primeira Gestão - Boas vindas</title>
+      <item identifier="ITEM-0C0BB73416F7AF06DAB5C376CA424858" identifierref="index" isvisible="true">
+        <title>Conteúdo</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="common_files" type="webcontent">
+      <file href="content/1-comece-por-aqui/index.html" />
+      <file href="content/2-e-sua-primeira-vez/index.html" />
+      <file href="content/3-a-historia-da-lideranca/index.html" />
+      <file href="content/4-a-historia-de-ranimiro-lotufo/index.html" />
+      <file href="content/5-agora-e-com-voce/index.html" />
+      <file href="content/6-campo-ou-arquibancada/index.html" />
+    </resource>
+    <resource href="index.html" identifier="index" adlcp:scormtype="sco" type="text/html">
+      <file href="js/app.js" />
+      <file href="js/app.js.map" />
+      <file href="js/chunk-vendors.js" />
+      <file href="js/chunk-vendors.js.map" />
+      <file href="js/scorm.js" />
+      <file href="img/loading.gif" />
+      <file href="img/login-cover.jpg" />
+      <file href="img/map-v.png" />
+      <file href="img/map.png" />
+      <file href="img/random-navigation.png" />
+      <file href="img/SanukOT-Bold.svg" />
+      <file href="img/SanukOT-Thin.svg" />
+      <file href="img/SanukOT.svg" />
+      <file href="img/sequel-navigation.png" />
+      <file href="css/app.css" />
+      <file href="css/chunk-vendors.css" />
+      <dependency identifierref="common_files" />
+    </resource>
+  </resources>
+</manifest>
+
