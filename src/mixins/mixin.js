@@ -120,15 +120,17 @@ const mixin = {
         // Remove duplicate values
         appChecks = Array.from(new Set(appChecks));
 
-        // SCORM completed
-        if (appChecks.length >= process.env.VUE_APP_QUANTITY_OF_SESSION) {
-          window.scormAPI.LMSInitialize('');
-          window.scormAPI.LMSSetValue("cmi.core.lesson_status", "completed");
-          window.scormAPI.LMSCommit('');
-        }
-        
         // Store data
         localStorage.setItem(productStoragerKey, JSON.stringify(appChecks));
+
+        // SCORM completed
+        if (appChecks.length >= process.env.VUE_APP_QUANTITY_OF_SESSION) {
+          try{
+            window.scormAPI.LMSInitialize('');
+            window.scormAPI.LMSSetValue("cmi.core.lesson_status", "completed");
+            window.scormAPI.LMSCommit('');
+          }catch(error){ console.log("not in lms") }
+        }
 
       }
     },
