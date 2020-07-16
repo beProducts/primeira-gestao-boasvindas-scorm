@@ -113,6 +113,13 @@
     <script type="text/javascript" src="fontloader.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media (min-width:1024px) {
+            .plyr_captions .plyr_caption {
+                font-size: 24px !important
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -128,6 +135,7 @@
             <div id="youtube_video" class="fr-widget fr-video fr-wf fr_youtube_video">
                 <video id="player" playsinline controls>
                     <source src="a-jornada-de-primeria-gestao.mp4" type="video/mp4" size="576" />
+                    <track kind="captions" label="Português" src="./A-Jornada-de-Primeria-Gestao-pt-br.vtt" srclang="pt-BR" default />
                 </video>
             </div>
         </div><!--
@@ -426,7 +434,7 @@
     <div id="footer-assets">
     </div>
     <script>
-        new Plyr('#player');        
+        new Plyr('#player', {captions: {active: true}});         
     </script>
 </body>
 
