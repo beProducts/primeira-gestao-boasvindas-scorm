@@ -15,6 +15,13 @@
 
     <link rel="stylesheet" href="plyr/plyr.css">
     <script type="text/javascript" src="plyr/plyr.js"></script>
+    <style>
+        @media (min-width:1024px) {
+            .plyr_captions .plyr_caption {
+                font-size: 24px !important
+            }
+        }
+    </style>
 </head>
 <body>
     <main class="container mt-3">
@@ -22,13 +29,14 @@
             <div class="col s12">
                 <video id="player" playsinline controls>
                     <source src="a-historia-de-ranimiro-lotufo.mp4" type="video/mp4" size="576" />
+                    <track kind="captions" label="Português" src="./A-historia-de-Ranimiro-Lotufo-pt-br.vtt" srclang="pt-BR" default />
                 </video>
                 <h1 class="center-align m-3">Quais escolhas você tem feito na sua vida?</h1>
             </div>
         </div>
     </main>
     <script>
-        new Plyr('#player');        
+        new Plyr('#player', {captions: {active: true}});        
     </script>
 </body>
 </html>
