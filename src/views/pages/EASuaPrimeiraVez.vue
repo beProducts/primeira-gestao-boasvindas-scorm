@@ -39,6 +39,7 @@ export default {
       timeSpentOnPage: 0,
       mainTimer: null,
       alarmTimer: null,
+      enterTime: null
     };
   },
   mounted() {
@@ -51,6 +52,9 @@ export default {
 
     // Send data to iframe
     EventBus.$on('iframeLoaded', this.sendStorageToIframe);
+
+    this.enterTime = Date.now();
+
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
@@ -62,6 +66,7 @@ export default {
   beforeRouteLeave(to, from, next) {
     this.stopTimer();
     this.setUserExit(from.meta.pageId, this.timeSpentOnPage);
+    this.setTimeScorm( Date.now() - this.enterTime );
     next();
   },
   methods: {

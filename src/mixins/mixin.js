@@ -1,3 +1,5 @@
+let timeAcumulator = 0;
+
 const mixin = {
   methods: {
     goToRoute(route) {
@@ -371,8 +373,36 @@ const mixin = {
           .then(res => res.json())
           .catch((error) => { throw error; });
       }
+    },
+    setTimeScorm( totalTimeMiliseconds ){
+
+      timeAcumulator += totalTimeMiliseconds;
+
+      const formatTime = ( miliseconds ) => {
+
+        let hours = Math.floor( ( miliseconds / (1000 * 60 * 60) ) % 24 );
+        let minutes = Math.floor( ( miliseconds / (1000 * 60) ) % 60 );
+        const seconds = Math.floor( ( miliseconds / 1000 ) % 60 );
+
+        if( hours >= 0 && hours <= 9 ) hours = `000${hours}`;
+        if( hours >= 10 && hours <= 99 ) hours = `00${hours}`;
+        if( hours >= 100 && hours <= 999 ) hours = `0${hours}`;
+        if( minutes >= 0 && minutes <= 9 ) minutes = `0${minutes}`;
+        
+        return hours + ':' + minutes + ':' + seconds + ':00';
+
+      };
+
+      console.log(formatTime( timeAcumulator ));
+
+      try{
+        window.scormAPI.LMSInitialize('');
+        window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeAcumulator ) );
+        window.scormAPI.LMSCommit('');
+      }catch(error){ console.log("not in lms") }
+
     }
-  },
+  }
 };
 
 export default mixin;
