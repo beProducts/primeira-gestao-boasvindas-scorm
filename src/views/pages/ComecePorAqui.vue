@@ -53,14 +53,13 @@ export default {
     // Send data to iframe
     EventBus.$on('iframeLoaded', this.sendStorageToIframe);
 
-    this.enterTime = Date.now();
-
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       vm.timeSpentOnPage = 0;
       vm.saveVisit(to.meta.pageId);
       vm.initTimer();
+      vm.enterTime = Date.now();
     });
   },
   beforeRouteLeave(to, from, next) {
