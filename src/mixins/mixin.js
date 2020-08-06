@@ -376,14 +376,12 @@ const mixin = {
     },
     setTimeScorm( totalTimeMiliseconds ){
 
-      const errorMargin = 2;
-
       timeAcumulator += totalTimeMiliseconds;
 
       const formatTime = ( miliseconds ) => {
 
         let hours = Math.floor( ( miliseconds / (1000 * 60 * 60) ) % 24 );
-        let minutes = Math.floor( ( ( miliseconds / (1000 * 60) ) % 60 ) + errorMargin );
+        let minutes = Math.floor( ( ( miliseconds / (1000 * 60) ) % 60 ) );
         let seconds = Math.floor( ( miliseconds / 1000 ) % 60 );
 
         if( hours >= 0 && hours <= 9 ) hours = `000${hours}`;
@@ -396,9 +394,12 @@ const mixin = {
 
       };
 
+      console.log(formatTime( timeAcumulator ))
+
       try{
         window.scormAPI.LMSInitialize('');
         window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeAcumulator ) );
+        console.log( window.scormAPI.LMSGetValue("cmi.core.total_time" ) );
         window.scormAPI.LMSCommit('');
       }catch(error){ console.log("not in lms") }
 
