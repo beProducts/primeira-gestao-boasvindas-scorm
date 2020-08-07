@@ -1,5 +1,3 @@
-let timeAcumulator = 0;
-
 const mixin = {
   methods: {
     goToRoute(route) {
@@ -376,8 +374,6 @@ const mixin = {
     },
     setTimeScorm( totalTimeMiliseconds ){
 
-      timeAcumulator += totalTimeMiliseconds;
-
       const formatTime = ( miliseconds ) => {
 
         let hours = Math.floor( ( miliseconds / (1000 * 60 * 60) ) % 24 );
@@ -394,9 +390,23 @@ const mixin = {
 
       };
 
+      const timeToMiliseconds = ( time ) => {
+        const hoursMiliseconds = parseInt( time.substring(0, 4) ) * 60 * 60 * 1000;
+        const minutesMiliseconds = parseInt( time.substring(5, 7) )  * 60 * 1000;
+        const secondsMiliseconds = parseInt( time.substring(8, 10) )  *  1000;
+        return hoursMiliseconds + minutesMiliseconds + secondsMiliseconds;
+      };
+
+      const updateLocalStorage = ( totalTimeScorm ) => {
+        const milisecondsLocalStorage = localStorage.getItem('total-time') || totalTimeScorm;
+        localStorage.setItem('total-time', parseInt(milisecondsLocalStorage) + totalTimeMiliseconds );
+        return localStorage.getItem('total-time') - totalTimeScorm;    
+      }
+
       try{
         window.scormAPI.LMSInitialize('');
-        window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeAcumulator ) );
+        const timeToSave = updateLocalStorage( timeToMiliseconds( window.scormAPI.LMSGetValue("cmi.core.total_time") ) );
+        window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeToSave ) );
         window.scormAPI.LMSCommit('');
       }catch(error){ console.log("not in lms") }
 
