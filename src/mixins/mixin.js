@@ -394,12 +394,9 @@ const mixin = {
 
       };
 
-      console.log(formatTime( timeAcumulator ))
-
       try{
         window.scormAPI.LMSInitialize('');
         window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeAcumulator ) );
-        console.log( window.scormAPI.LMSGetValue("cmi.core.total_time" ) );
         window.scormAPI.LMSCommit('');
       }catch(error){ console.log("not in lms") }
 
