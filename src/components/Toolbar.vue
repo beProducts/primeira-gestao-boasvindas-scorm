@@ -25,6 +25,14 @@
           </a>
         </p>
       </div>
+      <div>
+        <p class="center-align">
+          <a href="javascript:void(0);" @click="nextPage">
+            <ArrowRightThick />
+            <span class="text">Proximo</span>
+          </a>
+        </p>
+      </div>
     </div>
 
     <!-- Be Navigation Bar -->
@@ -216,9 +224,13 @@ import MessageReplyTextIcon from "vue-material-design-icons/MessageReplyText.vue
 import PencilIcon from "vue-material-design-icons/Pencil.vue";
 import Logout from "vue-material-design-icons/Logout.vue";
 import AccountEdit from "vue-material-design-icons/AccountEdit.vue";
+import ArrowRightThick from "vue-material-design-icons/ArrowRightThick.vue";
 
 // Images
 import LoadingImage from "../assets/images/loading.gif";
+
+// Router
+import router from "../router/index";
 
 export default {
   name: 'Toolbar',
@@ -233,6 +245,7 @@ export default {
     Logout,
     NavMenuItem,
     AccountEdit,
+    ArrowRightThick
   },
   data() {
     return {
@@ -322,6 +335,14 @@ export default {
       }else{
         this.openCommentBar();
       }
+    },
+    nextPage(){
+
+      const atualIndex = router.options.routes
+        .findIndex( route => route.path === router.currentRoute.fullPath );
+
+      if( atualIndex !== -1 ) router.push( router.options.routes[atualIndex + 1].path );
+
     },
     openCommentBar() {
       // Cleaning and loading

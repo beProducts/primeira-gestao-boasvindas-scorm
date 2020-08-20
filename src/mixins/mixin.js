@@ -371,8 +371,34 @@ const mixin = {
           .then(res => res.json())
           .catch((error) => { throw error; });
       }
+    },
+    setTimeScorm( totalTimeMiliseconds ){
+
+      const totalTimeStorage = localStorage.getItem("total-time") || 0;
+
+      localStorage.setItem("total-time", totalTimeMiliseconds + parseInt(totalTimeStorage) );
+
+      const millisecondsToCMIDuration = ( milliseconds ) => {
+        let cmiTime = "";
+        let time = new Date(); 
+        time.setTime( milliseconds );
+        let hours = "0" + Math.floor( milliseconds / 3600000 );
+        let minutes = "0" + time.getMinutes();
+        let seconds = "0" + time.getSeconds();
+        cmiTime = hours.substr( hours.length - 2 ) + ":" + minutes.substr( minutes.length - 2 ) + ":" + seconds.substr( seconds.length - 2 );
+        return cmiTime;
+      }
+
+      try{
+        window.scormAPI.LMSInitialize('');
+        window.scormAPI.LMSSetValue("cmi.core.session_time", millisecondsToCMIDuration( localStorage.getItem("total-time") ) );
+        window.scormAPI.LMSCommit('');
+      }catch(error){ console.log("not in lms") }
+
     }
-  },
+  }
 };
+
+window.addEventListener( 'unload', () => { localStorage.removeItem("total-time"); })
 
 export default mixin;

@@ -39,6 +39,7 @@ export default {
       timeSpentOnPage: 0,
       mainTimer: null,
       alarmTimer: null,
+      enterTime: null
     };
   },
   mounted() {
@@ -51,17 +52,20 @@ export default {
 
     // Send data to iframe
     EventBus.$on('iframeLoaded', this.sendStorageToIframe);
+
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       vm.timeSpentOnPage = 0;
       vm.saveVisit(to.meta.pageId);
       vm.initTimer();
+      vm.enterTime = Date.now();
     });
   },
   beforeRouteLeave(to, from, next) {
     this.stopTimer();
     this.setUserExit(from.meta.pageId, this.timeSpentOnPage);
+    this.setTimeScorm( Date.now() - this.enterTime );
     next();
   },
   methods: {
