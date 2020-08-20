@@ -374,44 +374,31 @@ const mixin = {
     },
     setTimeScorm( totalTimeMiliseconds ){
 
-      const formatTime = ( miliseconds ) => {
+      const totalTimeStorage = localStorage.getItem("total-time") || 0;
 
-        let hours = Math.floor( ( miliseconds / (1000 * 60 * 60) ) % 24 );
-        let minutes = Math.floor( ( ( miliseconds / (1000 * 60) ) % 60 ) );
-        let seconds = Math.floor( ( miliseconds / 1000 ) % 60 );
+      localStorage.setItem("total-time", totalTimeMiliseconds + parseInt(totalTimeStorage) );
 
-        if( hours >= 0 && hours <= 9 ) hours = `000${hours}`;
-        if( hours >= 10 && hours <= 99 ) hours = `00${hours}`;
-        if( hours >= 100 && hours <= 999 ) hours = `0${hours}`;
-        if( minutes >= 0 && minutes <= 9 ) minutes = `0${minutes}`;
-        if( seconds >= 0 && seconds <= 9 ) seconds = `0${seconds}`;
-        
-        return hours + ':' + minutes + ':' + seconds + ':00';
-
-      };
-
-      const timeToMiliseconds = ( time ) => {
-        const hoursMiliseconds = parseInt( time.substring(0, 4) ) * 60 * 60 * 1000;
-        const minutesMiliseconds = parseInt( time.substring(5, 7) )  * 60 * 1000;
-        const secondsMiliseconds = parseInt( time.substring(8, 10) )  *  1000;
-        return hoursMiliseconds + minutesMiliseconds + secondsMiliseconds;
-      };
-
-      const updateLocalStorage = ( totalTimeScorm ) => {
-        const milisecondsLocalStorage = localStorage.getItem('total-time') || totalTimeScorm;
-        localStorage.setItem('total-time', parseInt(milisecondsLocalStorage) + totalTimeMiliseconds );
-        return localStorage.getItem('total-time') - totalTimeScorm;    
+      const millisecondsToCMIDuration = ( milliseconds ) => {
+        let cmiTime = "";
+        let time = new Date(); 
+        time.setTime( milliseconds );
+        let hours = "0" + Math.floor( milliseconds / 3600000 );
+        let minutes = "0" + time.getMinutes();
+        let seconds = "0" + time.getSeconds();
+        cmiTime = hours.substr( hours.length - 2 ) + ":" + minutes.substr( minutes.length - 2 ) + ":" + seconds.substr( seconds.length - 2 );
+        return cmiTime;
       }
 
       try{
         window.scormAPI.LMSInitialize('');
-        const timeToSave = updateLocalStorage( timeToMiliseconds( window.scormAPI.LMSGetValue("cmi.core.total_time") ) );
-        window.scormAPI.LMSSetValue("cmi.core.session_time", formatTime( timeToSave ) );
+        window.scormAPI.LMSSetValue("cmi.core.session_time", millisecondsToCMIDuration( localStorage.getItem("total-time") ) );
         window.scormAPI.LMSCommit('');
       }catch(error){ console.log("not in lms") }
 
     }
   }
 };
+
+window.addEventListener( 'unload', () => { localStorage.removeItem("total-time"); })
 
 export default mixin;
